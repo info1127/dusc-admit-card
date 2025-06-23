@@ -92,7 +92,7 @@ def generate_admit_cards(df, exam_name, logo_path):
 # Streamlit UI
 st.set_page_config(page_title="DUSC Admit Card Generator", layout="centered")
 st.title("🎓 DUSC Admit Card Generator")
-st.write("Developed by Md Shahriar Hasan Sabuj, with help of ChatGPT")
+st.write("Developed by Md Shahriar Hasan Sabuj")
 
 exam_name = st.text_input("📘 Enter Exam Name", value="Half Yearly Exam")
 logo_file = st.file_uploader("📌 Upload School Logo (PNG/JPG)", type=["png", "jpg", "jpeg"])

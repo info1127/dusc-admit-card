@@ -63,7 +63,7 @@ class AdmitCardPDF(FPDF):
         self.cell(0, 10, f"Name: {student['Name']}", ln=True)
 
         self.set_x(inner_x + 5)
-        self.cell(95, 10, f"ID: {student['ID']}")
+        self.cell(95, 10, f"ID: {int(student['ID']) if pd.notna(student['ID']) else ''}")
         self.cell(0, 10, f"Class: {student['Class']}", ln=True)
 
         self.set_x(inner_x + 5)

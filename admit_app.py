@@ -74,8 +74,8 @@ class AdmitCardPDF(FPDF):
         self.set_x(inner_x + 5)
         self.cell(
             0,
-            8,
-            "Accounts Signature: __________                   Principal Signature: __________",
+            5,
+            "Accounts Signature: __________                         Principal Signature: __________",
             align="C",
             ln=True
         )

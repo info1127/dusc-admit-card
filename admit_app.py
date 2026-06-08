@@ -7,12 +7,7 @@ from fpdf import FPDF
 import os
 import tempfile
 
-class AdmitCardPDF(FPDF):
-    def _init_(self, exam_name, logo_path):
-        super()._init_()
-        self.exam_name = exam_name
-        self.logo_path = logo_path
-        self.set_auto_page_break(auto=False)
+class AdmitCardPDF(FPDF):    def __init__(self, exam_name, logo_path):        super().__init__(orientation='P', unit='mm', format='A4')  # Recommended        self.exam_name = exam_name        self.logo_path = logo_path        self.set_auto_page_break(auto=False)
 
     def generate_card(self, student, y):
         outer_x = 10

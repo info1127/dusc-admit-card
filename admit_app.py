@@ -12,7 +12,6 @@ import tempfile
 
 class AdmitCardPDF(FPDF):
 
-```
 def __init__(self, exam_name, logo_path):
     super().__init__()
 
@@ -154,7 +153,7 @@ def generate_card(self, student, y):
         ln=True,
         align="C"
     )
-```
+
 
 # =========================
 
@@ -164,7 +163,7 @@ def generate_card(self, student, y):
 
 def generate_admit_cards(df, exam_name, logo_path):
 
-```
+
 pdf = AdmitCardPDF(exam_name, logo_path)
 
 cards_per_page = 3
@@ -191,7 +190,6 @@ output_path = os.path.join(
 pdf.output(output_path)
 
 return output_path
-```
 
 # =========================
 
@@ -221,7 +219,7 @@ Generate professional admit cards instantly from Excel sheets.
 </p>
 """,
 unsafe_allow_html=True
-```
+
 
 )
 
@@ -263,7 +261,7 @@ type=["xlsx"]
 
 if data_file:
 
-```
+
 try:
 
     df = pd.read_excel(data_file)
@@ -296,7 +294,7 @@ except Exception as e:
     st.error(
         f"❌ Error Reading Excel File: {e}"
     )
-```
+
 
 # =========================
 
@@ -306,7 +304,7 @@ except Exception as e:
 
 if st.button("🚀 Generate Admit Cards"):
 
-```
+
 if not exam_name.strip():
 
     st.warning(
@@ -370,7 +368,7 @@ else:
         st.error(
             f"❌ Error: {e}"
         )
-```
+
 
 # =========================
 
@@ -381,7 +379,6 @@ else:
 st.markdown(
 """ <hr>
 
-```
 <div style='text-align:center; color:gray; font-size:13px;'>
 
 DUSC Automation System <br>
@@ -390,6 +387,6 @@ DUSC Automation System <br>
 </div>
 """,
 unsafe_allow_html=True
-```
+
 
 )
